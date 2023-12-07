@@ -5,7 +5,7 @@ Welcome to the Automatic Pothole Detection project! This repository contains Pyt
 ## Overview
 Detected potholes are visualized in an interactive web interface, and the results of predictions are stored in the `runs/detect/predict` folder. Images without detections are moved to the `no_detection` folder. These folders are all created automatically.
 
-Explore the [Detected Potholes Map](https://your-username.github.io/your-repository/detected.html) - an interactive map of detected potholes.
+Explore the [Detected Potholes Map](https://pwilliamspeniel.github.io/Pothole-Detection/detected.html) - an interactive map of detected potholes.
 
 ## Getting Started
 
@@ -68,7 +68,7 @@ python automation.py
 
 ## View the Deployed Example
 
-Explore the [Detected Potholes Map](https://your-username.github.io/your-repository/detected.html) - an interactive map of detected potholes.
+Explore the [Detected Potholes Map](https://pwilliamspeniel.github.io/Pothole-Detection/detected.html) - an interactive map of detected potholes.
 
 ## Contributing
 
