@@ -3,7 +3,7 @@
 Welcome to the Automatic Pothole Detection project! This repository contains Python code designed to automatically detect potholes in user-submitted images. The system utilizes YOLO (You Only Look Once) for object detection and incorporates EXIF data for improved accuracy.
 
 ## Overview
-Detected potholes are visualized in an interactive web interface, and the results of predictions are stored in the `runs/detect/predict` folder. Images without detections are moved to the `no_detection` folder.
+Detected potholes are visualized in an interactive web interface, and the results of predictions are stored in the `runs/detect/predict` folder. Images without detections are moved to the `no_detection` folder. These folders are all created automatically.
 
 Explore the [Detected Potholes Map](https://your-username.github.io/your-repository/detected.html) - an interactive map of detected potholes.
 
