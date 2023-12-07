@@ -16,3 +16,8 @@ This repository contains Python code for automatically detecting potholes in use
 ```bash
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
+
+# Install Dependencies
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
