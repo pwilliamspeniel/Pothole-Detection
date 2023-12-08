@@ -1,5 +1,7 @@
 # Automatic Pothole Detection from Images with EXIF Data
 
+![ezgif com-gif-maker](https://github.com/pwilliamspeniel/Pothole-Detection/assets/117294736/6b81a500-12b3-41d3-87cc-493d5ae90a7e)
+
 Welcome to the Automatic Pothole Detection project! This repository contains Python code designed to automatically detect potholes in user-submitted images. The system utilizes YOLO (You Only Look Once) for object detection and incorporates EXIF data for improved accuracy.
 
 ## Overview
