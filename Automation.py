@@ -4,11 +4,13 @@ from folium.plugins import MarkerCluster
 from GPS_Extraction import process_images
 import numpy as np
 
-script_dir = os.path.dirname(os.path.realpath(__file__))
+# script_dir = os.path.dirname(os.path.realpath(__file__))
+# print(script_dir)
 
 def open_webview():
     # this is the path to the predicted images
-    folder_path = os.path.join(script_dir, 'runs', 'detect', 'predict')
+    folder_path = os.path.join('runs', 'detect', 'predict')
+    print(folder_path)
 
     output_list = process_images(folder_path)
 
@@ -29,22 +31,22 @@ def open_webview():
     marker_cluster = MarkerCluster().add_to(map)
 
     for x, y, z in coordinates_list:
-        popup_html = f'<a href="{z}" target="_blank" onclick="window.open(this.href, \'\', \'fullscreen=yes\'); ' \
-                     f'return false;"><img src="{z}" style="width:250px; height:250px;"></a> '
+        street_view_link = f'http://maps.google.com/maps?q=&layer=c&cbll={x},{y}&cbp=11,0,0,0,0'
+        popup_html = f'<a href="{street_view_link}" target="_blank">View in Google Street View</a><br><img src="{z}" style="width:250px; height:250px;">'
         folium.Marker(
             location=[x, y],
-            popup=folium.Popup(popup_html, max_width=250),
+            popup=folium.Popup(popup_html, max_width=300),
         ).add_to(marker_cluster)
 
-    # Add a layer control for marker categories
     categories = ['Detected']
     layer_control = folium.LayerControl(position='topleft', collapsed=False)
-    for category in categories:
-        marker_cluster.layer_name = category
-        map.add_child(marker_cluster)
+
+    marker_cluster.layer_name = 'Detected'
+    map.add_child(marker_cluster)
 
     map.add_child(layer_control)
-    return map.save('detected.html')
+
+    map.save('detected.html')
 
 
 open_webview()
